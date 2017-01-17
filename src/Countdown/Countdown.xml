@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="Countdown.widget.Countdown" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Countdown</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="countDownDate" type="attribute">
+            <caption>Datetime</caption>
+            <category>Appearance</category>
+            <description>Date to count to</description>
+			<attributeTypes>
+                <attributeType name="DateTime" />
+            </attributeTypes>
+        </property>
+        <property key="message" type="translatableString"  required="false">
+            <caption>Message</caption>
+            <category>Appearance</category>
+            <description>Message to show after countdown just before executing mf</description>
+        </property>
+		<property key="intervalAfterCountDown" type="integer" defaultValue="0">
+            <caption>Interval (in ms)</caption>
+            <category>Behavior</category>
+            <description>
+                Defines after how many  ms the mf is executed, 0  is immidiatly 
+            </description>
+        </property>
+		 <property key="microflow" type="microflow"  required="false">
+            <caption>Microflow</caption>
+            <category>Behavior</category>
+            <description>The microflow to be executed after the countdown.</description>
+            <returnType type="Boolean" />
+        </property>
+    </properties>
+</widget>
+
